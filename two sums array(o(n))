@@ -1,0 +1,17 @@
+var n=[2, 7, 11, 15];
+var val1;
+var val2;
+ var target = 13;
+ for(var i of n){
+   if(target-i in n){
+        val1=i;
+   }
+ }
+ for(var i of n){
+ if(val1+i==target){
+     val2=i;
+   }
+ }
+ console.log(n.indexOf(val1),n.indexOf(val2));
+ 
+ 
