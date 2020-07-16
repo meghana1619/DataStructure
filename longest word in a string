@@ -1,0 +1,12 @@
+function LongestWord(sen) { 
+ var a=sen.split(' ');
+ var q=[]
+for(var i=0;i<a.length;i++)
+{
+   q.push(a[i].length);
+}
+var i=q.indexOf(Math.max.apply(null,q));
+  return a[i]; 
+
+}
+   
