@@ -1,0 +1,30 @@
+//o(n^2)
+let a=[1,2,3,4,1,2];
+function f(a){
+for(var i=0;i<a.length;i++){
+  for(var j=i+1;j<a.length;j++){
+    if(a[i]==a[j]){
+      return a[i];
+      break;
+    }
+  }
+  
+}
+}
+console.log(f(a))
+
+
+//o(n) usiing hash
+function f2(a){
+  let map={}
+  for(var i=0;i<a.length;i++){
+    if(map[a[i]] !== undefined){     //hash map[i] returns undefined if not present .............else returns the index
+      return a[i];
+    }
+    else{
+      map[a[i]]=i;
+    }
+  }
+}
+
+console.log(f2(a))
