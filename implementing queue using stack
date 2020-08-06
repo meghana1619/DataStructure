@@ -1,0 +1,17 @@
+  let first=[];
+  let last=[];
+
+  function enqueue(value){
+    first.push(value);
+    last.push(first.pop());
+    return last;
+  }
+  function dequeue(){
+    last.shift();
+    return last;
+  }
+enqueue('a');
+enqueue('v');
+enqueue('r');
+//dequeue();
+//dequeue();
