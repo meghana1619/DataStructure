@@ -1,0 +1,25 @@
+class Graph{
+  constructor(){
+    this.noOfNodes=0;
+    this.adjList={};
+  }
+addvertex(node){
+  this.adjList[node]=[];
+  this.noOfNodes++;
+  return this.adjList;
+}
+addedge(n1,n2){
+  this.adjList[n1].push(n2);
+  this.adjList[n2].push(n1);
+  return this.adjList;
+}
+}
+let g=new Graph();
+g.addvertex(0);
+g.addvertex(1);
+g.addvertex(2);
+g.addvertex(3);
+g.addedge(0,2);
+g.addedge(1,2);
+g.addedge(1,3);
+g.addedge(2,3);
